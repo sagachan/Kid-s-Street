@@ -1,6 +1,7 @@
 //エネミー関係で共通に使う可能性のあるもの
 #pragma once
 #include "EnemyBase.h"
+#include "../Library/LibraryCommon.h"
 #include "DxLib.h"
 
 enum ENEMY_UI_TYPE
@@ -91,8 +92,8 @@ namespace
 {
 	const float BOSS_HP_UI_X = 10.0f;
 	const float BOSS_HP_UI_Y = 20.0f;
-	const VECTOR BOSS_HP_POS = VGet(10.0f, 25.0f, 0.0f);
 	const VECTOR BOSS_HP_END_POS = VGet(2050.0f, 2000.0f, 0.0f);
+	const VECTOR2 BOSS_HP_POS = { 10.0f, 25.0f };
 }
 
 //敵の細部パラメータ

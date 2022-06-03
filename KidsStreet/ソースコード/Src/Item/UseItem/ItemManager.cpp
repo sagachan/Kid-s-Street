@@ -65,6 +65,7 @@ void CItemManager::MinimizeCall(CGatherBase* item[], int maxNum, VOID_TYPE type)
 		case VOID_LOAD:item[kind]->Load(); break;
 		case VOID_SET:item[kind]->Set(); break;
 		case VOID_STEP:item[kind]->Step(); break;
+		case VOID_UPDATE:item[kind]->Update(); break;
 		case VOID_DRAW:item[kind]->Draw(); break;
 		case VOID_FIN:item[kind]->Fin(); break;
 
@@ -209,6 +210,8 @@ void CItemManager::Update()
 	if (activate_ == true){
 		useItem_[useNum_]->Step();
 	}
+
+	MinimizeCall(gatherItem_, ITEM_ID_MAX, VOID_UPDATE);
 }
 
 
@@ -373,8 +376,9 @@ void CItemManager::SerchItem(CItemBase* item[], ITEM_KIND kind)
 //	//当たり判定クラスに必要な情報を渡す
 //	CCollisionManager::GetInstance()->SetItemCollision(itemData);
 //	free(itemData);
-//}
-//	
+//
+
+
 //当たり判定処理（アイテムマネージャーによって行われた条件を通過したときに実行される
 void CItemManager::DamageVanish(int num)
 {

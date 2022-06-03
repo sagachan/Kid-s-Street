@@ -92,10 +92,15 @@ struct COL_DATA
 	}
 };
 
+//2Dの位置座標関係に使えるベクター
+struct VECTOR2
+{
+	float x;
+	float y;
+};
+
 namespace
 {
 	// 定義関連
 	const VECTOR DEFAULT_SCALE = { 1.0f, 1.0f, 1.0f };	// 通常スケールはオール1なので
-
-	
 }

@@ -25,7 +25,7 @@ namespace
 	const int		JUMP_CALC_X			= 60;
 	const int		PUNCH_ATTRACT		= 20;
 	const float		RADIUS				= 2.0f;							//当たり判定用、正方形一辺ごとの長さ
-	const int		BOSS_STAND_END		= 60;							//ボスのスタンドモーションが終わるフレーム
+	const int		BOSS_STAND_END		= 90;							//ボスの後隙、これが長いほどカウンター対応時間が短くなる
 	const int		BOSS_TARGET_FRM		= 60;							//ボスがターゲットを始めるフレーム
 	const float		BOSS_PUNCH_AREA		= 20.0f;						//ボスのパンチ可能エリア
 	const int		BOSS_PUNCH_FIRST	= 120;

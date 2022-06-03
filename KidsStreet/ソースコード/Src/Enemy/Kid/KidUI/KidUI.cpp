@@ -6,7 +6,8 @@
 
 namespace
 {
-	
+	const float KID_UI_POS_X = 60.0f;
+	const float KID_UI_POS_Y = 20.0f;
 }
 
 
@@ -26,12 +27,12 @@ void CKidUI::Init()
 	CGameUIManager* ui_manager = CGameUIManager::GetInstance();
 	//¶¬
 	uiAssert_[ASSERT_START] = ui_manager->CreateUI(CGameUIManager::UI_TYPE_ASSERT);
-	uiAssert_[ASSERT_START]->Init(60.0f, 20.0f);
+	uiAssert_[ASSERT_START]->Init(KID_UI_POS_X,KID_UI_POS_Y);
 	uiAssert_[ASSERT_START]->Load("Data/UI/KidUI/KidAssertStart.png");
 
 	//¶¬
 	uiAssert_[ASSERT_END] = ui_manager->CreateUI(CGameUIManager::UI_TYPE_ASSERT);
-	uiAssert_[ASSERT_END]->Init(60.0f, 20.0f);
+	uiAssert_[ASSERT_END]->Init(KID_UI_POS_X, KID_UI_POS_Y);
 	uiAssert_[ASSERT_END]->Load("Data/UI/KidUI/KidAssertEnd.png");
 
 	kidFlg_ = false;
@@ -56,8 +57,7 @@ void CKidUI::Step()
 	if (kidFlg_)
 	{
 		CInput* input = CInput::GetInstance();
-		if (input->IsPush(input->INPUT_KIND_KEY, KEY_INPUT_RETURN))
-		{
+		if (input->IsPush(input->INPUT_KIND_KEY, KEY_INPUT_RETURN)){
 			type_++;
 		}
 

@@ -19,6 +19,7 @@ namespace
 void CGatherEraser::Init()
 {
 	bool* uiFlg = CGatherManager::GetInstance()->GetGatherItem();
+	kind_ = ERASER;
 
 	//‚·‚Å‚ÉŠl“¾‚³‚ê‚Ä‚¢‚é‚È‚ç¶¬‚µ‚È‚¢
 	if (!uiFlg[ERASER]) {
@@ -28,6 +29,11 @@ void CGatherEraser::Init()
 		CGatherItem* gatherEraser = gatherManager->CreateItem(CGatherManager::BOSS_ONLY_ITEM);
 		gatherEraser->Init(ERASER_POS);
 		gatherEraser->Load("Data/Item/BunishGom.x");
+
+		//¶¬
+		uiProperty_[PROPERTY_OPEN] = CGameUIManager::GetInstance()->CreateUI(CGameUIManager::UI_TYPE_ASSERT);
+		uiProperty_[PROPERTY_OPEN]->Init(ITEM_PROPERTY_POS.x, ITEM_PROPERTY_POS.y);
+		uiProperty_[PROPERTY_OPEN]->Load("Data/UI/ItemProperty/BunishPro.png");
 	}
 
 	//UIŠÇ—
@@ -80,6 +86,8 @@ void CGatherEraser::Gather()
 		CSound::PlaySE(CSound::SE_GET);
 		//ˆ—I—¹ƒtƒ‰ƒO‚ğ‚½‚Ä‚é
 		endFlg_ = true;
+		propertyFlg_ = true;
 	}
 
 }
+

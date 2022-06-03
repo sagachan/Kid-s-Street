@@ -18,6 +18,7 @@ namespace
 void CGatherRuler::Init()
 {
 	bool* uiFlg = CGatherManager::GetInstance()->GetGatherItem();
+	kind_ = RULER;
 
 	//すでに獲得されているなら生成しない
 	if (!uiFlg[RULER]) {
@@ -27,6 +28,10 @@ void CGatherRuler::Init()
 		CGatherItem* GatherRuler = ui_manager->CreateItem(CGatherManager::BOSS_ONLY_ITEM);
 		GatherRuler->Init(RULER_POS);
 		GatherRuler->Load("Data/Item/Ruler.x");
+		//アイテム情報表示生成
+		uiProperty_[PROPERTY_OPEN] = CGameUIManager::GetInstance()->CreateUI(CGameUIManager::UI_TYPE_ASSERT);
+		uiProperty_[PROPERTY_OPEN]->Init(ITEM_PROPERTY_POS.x, ITEM_PROPERTY_POS.y);
+		uiProperty_[PROPERTY_OPEN]->Load("Data/UI/ItemProperty/RulerPro.png");
 	}
 
 	//UI管理
@@ -54,6 +59,8 @@ void CGatherRuler::Step()
 	//集められていないなら
 	if (!endFlg_)
 		Gather();
+
+	PropertyWindow();
 }
 
 //アイテム収集更新
@@ -75,5 +82,6 @@ void CGatherRuler::Gather()
 		CSound::PlaySE(CSound::SE_GET);
 		//処理終了フラグをたてる
 		endFlg_ = true;
+		propertyFlg_ = true;
 	}
 }

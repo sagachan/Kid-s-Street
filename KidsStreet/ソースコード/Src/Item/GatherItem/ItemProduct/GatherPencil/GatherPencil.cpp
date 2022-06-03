@@ -18,6 +18,7 @@ namespace
 void CGatherPencil::Init()
 {
 	bool* uiFlg = CGatherManager::GetInstance()->GetGatherItem();
+	kind_ = PENCIL;
 
 	//すでに獲得されているなら生成しない
 	if (!uiFlg[PENCIL]) {
@@ -27,6 +28,10 @@ void CGatherPencil::Init()
 		CGatherItem* gatherPencil = ui_manager->CreateItem(CGatherManager::BOSS_ONLY_ITEM);
 		gatherPencil->Init(PENCIL_POS);
 		gatherPencil->Load("Data/Item/Enpitu.x");
+		//アイテム情報表示生成
+		uiProperty_[PROPERTY_OPEN] = CGameUIManager::GetInstance()->CreateUI(CGameUIManager::UI_TYPE_ASSERT);
+		uiProperty_[PROPERTY_OPEN]->Init(ITEM_PROPERTY_POS.x, ITEM_PROPERTY_POS.y);
+		uiProperty_[PROPERTY_OPEN]->Load("Data/UI/ItemProperty/PencilPro.png");
 	}
 
 	//UI管理
@@ -54,6 +59,8 @@ void CGatherPencil::Step()
 	//集められていないなら
 	if (!endFlg_)
 		Gather();
+
+	PropertyWindow();
 }
 
 //アイテム収集更新
@@ -75,5 +82,6 @@ void CGatherPencil::Gather()
 		CSound::PlaySE(CSound::SE_GET);
 		//処理終了フラグをたてる
 		endFlg_ = true;
+		propertyFlg_ = true;
 	}
 }

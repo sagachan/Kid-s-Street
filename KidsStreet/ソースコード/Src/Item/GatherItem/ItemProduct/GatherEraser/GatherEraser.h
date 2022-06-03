@@ -22,5 +22,6 @@ public:
 
 private:
 	void Gather();					//アイテム収集更新
+
 	
 };

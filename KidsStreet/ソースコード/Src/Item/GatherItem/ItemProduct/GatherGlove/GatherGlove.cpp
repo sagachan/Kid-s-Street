@@ -19,6 +19,7 @@ namespace
 void CGatherGlove::Init()
 {
 	bool* uiFlg = CGatherManager::GetInstance()->GetGatherItem();
+	kind_ = GLOVE;
 
 	//すでに獲得されているなら生成しない
 	if (!uiFlg[GLOVE]) {
@@ -28,6 +29,10 @@ void CGatherGlove::Init()
 		CGatherItem* gatherGlove = gatherManager->CreateItem(CGatherManager::BOSS_ONLY_ITEM);
 		gatherGlove->Init(GLOVE_POS);
 		gatherGlove->Load("Data/Item/glove.x");
+		//アイテム情報表示生成
+		uiProperty_[PROPERTY_OPEN] = CGameUIManager::GetInstance()->CreateUI(CGameUIManager::UI_TYPE_ASSERT);
+		uiProperty_[PROPERTY_OPEN]->Init(ITEM_PROPERTY_POS.x, ITEM_PROPERTY_POS.y);
+		uiProperty_[PROPERTY_OPEN]->Load("Data/UI/ItemProperty/GlovePro.png");
 	}
 
 	//UI管理
@@ -80,6 +85,7 @@ void CGatherGlove::Gather()
 		CSound::PlaySE(CSound::SE_GET);
 		//処理終了フラグをたてる
 		endFlg_ = true;
+		propertyFlg_ = true;
 	}
-
 }
+

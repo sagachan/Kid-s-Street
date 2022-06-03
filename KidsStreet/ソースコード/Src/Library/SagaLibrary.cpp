@@ -14,14 +14,14 @@ template <class Base>void CSagaLibrary::MinimizeCall(Base* base[], int maxNum, V
 
 	for (int kind = 0; kind < maxNum; kind++) {
 		switch (type) {
-		case VOID_INIT:base[kind]->Init(); break;
-		case VOID_LOAD:base[kind]->Load(); break;
-		case VOID_SET:base[kind]->Set(); break;
-		case VOID_STEP:base[kind]->Step(); break;
-		case VOID_UPDATE:base[kind]->Update(); break;
-		case VOID_DRAW:base[kind]->Draw(); break;
-		case VOID_DELETE:base[kind]->Delete(); break;
-		case VOID_FIN:base[kind]->Fin(); break;
+		case VOID_INIT:		base[kind]->Init();		break;
+		case VOID_LOAD:		base[kind]->Load();		break;
+		case VOID_SET:		base[kind]->Set();		break;
+		case VOID_STEP:		base[kind]->Step();		break;
+		case VOID_UPDATE:	base[kind]->Update();	break;
+		case VOID_DRAW:		base[kind]->Draw();		break;
+		case VOID_DELETE:	base[kind]->Delete();	break;
+		case VOID_FIN:		base[kind]->Fin();		break;
 
 			//‚Ç‚ê‚É‚à‘®‚³‚È‚¢ê‡
 		default:
@@ -36,12 +36,12 @@ template <class Base>void CSagaLibrary::MinimizePointCall(Base* base[], int maxN
 {
 	for (int kind = 0; kind < maxNum; kind++) {
 		switch (type) {
-		case VOID_INIT:base[kind]->Init(); break;
-		case VOID_LOAD:base[kind]->Load(); break;
-		case VOID_SET:base[kind]->Set(); break;
-		case VOID_STEP:base[kind]->Step(); break;
-		case VOID_DRAW:base[kind]->Draw(); break;
-		case VOID_FIN:base[kind]->Fin(); break;
+		case VOID_INIT:	base[kind]->Init(); break;
+		case VOID_LOAD:	base[kind]->Load(); break;
+		case VOID_SET:	base[kind]->Set();	break;
+		case VOID_STEP:	base[kind]->Step(); break;
+		case VOID_DRAW:	base[kind]->Draw(); break;
+		case VOID_FIN:	base[kind]->Fin();	break;
 
 			//‚Ç‚ê‚É‚à‘®‚³‚È‚¢ê‡
 		default:

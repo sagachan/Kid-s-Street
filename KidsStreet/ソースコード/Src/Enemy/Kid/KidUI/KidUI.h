@@ -13,7 +13,7 @@ class CKidUI : public CUIBase
 public:
 	CKidUI();
 	~CKidUI();
-public:
+private:
 	enum ASSERT_TYPE
 	{
 		ASSERT_INIT = -1,
