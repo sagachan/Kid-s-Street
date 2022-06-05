@@ -41,6 +41,7 @@
     <ClCompile Include="Src\Field\FieldManager.cpp" />
     <ClCompile Include="Src\Field\Inter\Inter.cpp" />
     <ClCompile Include="Src\Field\Map\Field.cpp" />
+    <ClCompile Include="Src\Field\Navi\Navi.cpp" />
     <ClCompile Include="Src\Field\Pole\Pole.cpp" />
     <ClCompile Include="Src\Field\Road\Road.cpp" />
     <ClCompile Include="Src\Field\Umbrella\Umbrella.cpp" />
@@ -122,6 +123,7 @@
     <ClInclude Include="Src\Field\FieldManager.h" />
     <ClInclude Include="Src\Field\Inter\Inter.h" />
     <ClInclude Include="Src\Field\Map\Field.h" />
+    <ClInclude Include="Src\Field\Navi\Navi.h" />
     <ClInclude Include="Src\Field\Pole\Pole.h" />
     <ClInclude Include="Src\Field\Road\Road.h" />
     <ClInclude Include="Src\Field\Umbrella\Umbrella.h" />
@@ -189,12 +191,12 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>

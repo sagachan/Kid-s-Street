@@ -10,6 +10,7 @@
 #include "FieldCommon.h"
 #include "Pole/Pole.h"
 #include "Umbrella/Umbrella.h"
+#include "Navi/Navi.h"
 
 class CFieldManager
 {
@@ -47,4 +48,5 @@ private:
 	CRoad					road_;								//道クラス
 	CPole					pole_;								//電柱クラス
 	CUmbrella				umbrella_;							//傘クラス
+	CNavi					navi_;								//道案内クラス
 };

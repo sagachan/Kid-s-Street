@@ -32,15 +32,16 @@ namespace
 {
 	const int		END_TIME = 210;				//使用開始されてから使用終了までの時間
 
-	const int		MAX_ERASER = 5;			//消しゴムの最大値
-	const int		MAX_PENCIL = 10;			//鉛筆の最大値
-	const int		MAX_RULER = 7;
+	const int		MAX_ERASER = 10;			//消しゴムの最大値
+	const int		MAX_PENCIL = 20;			//鉛筆の最大値
+	const int		MAX_RULER = 10;
 	const int		MAX_GLOVE = 1;
-	const int		MAX_ITEM_NUM = MAX_ERASER + MAX_PENCIL + MAX_RULER+MAX_GLOVE;		//アイテムの合計値
+	const int		MAX_ITEM_NUM = MAX_ERASER + MAX_PENCIL + MAX_RULER+MAX_GLOVE;	//アイテムの合計値
 	const int		ERASER_DMG = 15;			//消しゴムのダメージ量
-	const int		PENCIL_DMG = 5;
-	const int		RULER_DMG = 10;
-	const int		GLOVE_DMG = 5;
+	const int		PENCIL_DMG = 5;				//鉛筆のダメージ量
+	const int		RULER_DMG = 10;				//三角定規のダメージ量
+	const int		RULER_HIT_DMG = 3;			//三角定規のダメージ貫通量
+	const int		GLOVE_DMG = 8;				//手袋のダメージ量
 	
 	const float		ITEM_GATHER_AREA = 6.0f;	//プレイヤーがアイテムをとったと認めるエリア
 	const float		ITEM_SCALE_F = 2.0f;		//落ちているアイテムの拡縮

@@ -14,7 +14,7 @@ namespace
 	const float SCALE = 1.0;						//‘å‚«‚³
 	const VECTOR POS = VGet(0.0f,0.0f,0.0f);		//ˆÊ’u
 	const VECTOR ROT = VGet(4.71f,1.6f,0.0f);		//‰ñ“]’l
-	const float ROLL_SPD = 0.5f;							//‰ñ“]‘¬“x
+	const float ROLL_SPD = 0.5f;					//‰ñ“]‘¬“x
 	const float SPEED = 1.0;						//”ò‚Ô‘¬“x
 	const float SIMPLE_HIT_RADIUS = 4.0;			//ŠÈˆÕ“–‚½‚è”»’è—p
 	const VECTOR COL_RADIUS = VGet(4.0f, 4.0f, 4.0f);
@@ -98,6 +98,7 @@ void CRuler::Hit()
 				{
 					boss->SetBossAIFlg(true);
 					itemManager->SetBossItemInfo(itemNum_);
+					boss->Damage(RULER_HIT_DMG);
 				}
 				else
 				{

@@ -91,10 +91,10 @@ void CPlayCamera::Step()
 	float stick_y = input->GetStickValue(RIGHT_STICK_Y);
 
 	// XŽ²‰ñ“]
-	if (input->IsDown(input->INPUT_KIND_KEY, KEY_INPUT_UP)) {
+	if (input->IsDown(input->INPUT_KIND_KEY, KEY_INPUT_DOWN)) {
 		cameraInfo_.fRotX_ += CAMERA_ROT_SPEED;
 	}
-	else if (input->IsDown(input->INPUT_KIND_KEY, KEY_INPUT_DOWN)) {
+	else if (input->IsDown(input->INPUT_KIND_KEY, KEY_INPUT_UP)) {
 		cameraInfo_.fRotX_ -= CAMERA_ROT_SPEED;
 	}
 

@@ -27,7 +27,7 @@ public:
 
 	//セッター
 	void	SetItemSaveFlg(bool* flg);
-	void	SetBossFlg(bool flg) { bossFlg_ = flg; }
+	void	SetBossFlg(bool flg) {if(!flg) bossFlg_ = false; }
 
 private:
 	static CSaveScene* instance_;

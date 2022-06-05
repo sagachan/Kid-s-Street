@@ -181,6 +181,9 @@
     <Filter Include="Src\Scene\SaveScene">
       <UniqueIdentifier>{de5148b9-fed5-49ea-a32c-6fb847397c10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Field\Navi">
+      <UniqueIdentifier>{da98dded-d67c-4c91-9262-81ead1b15ff0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Camera\CameraManager.cpp">
@@ -404,6 +407,9 @@
     </ClCompile>
     <ClCompile Include="Src\Scene\SaveScene\SaveScene.cpp">
       <Filter>Src\Scene\SaveScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Field\Navi\Navi.cpp">
+      <Filter>Src\Field\Navi</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -652,6 +658,9 @@
     </ClInclude>
     <ClInclude Include="Src\Scene\SaveScene\SaveScene.h">
       <Filter>Src\Scene\SaveScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Field\Navi\Navi.h">
+      <Filter>Src\Field\Navi</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

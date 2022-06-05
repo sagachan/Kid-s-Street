@@ -13,6 +13,7 @@ void CFieldManager::Load()
 	road_.Load();
 	inter_.Load();
 	pole_.Load();
+	navi_.Load();
 }
 
 //セット
@@ -28,6 +29,7 @@ void CFieldManager::Set()
 void CFieldManager::Step()
 {
 	inter_.InterManager();
+	navi_.Step();
 }
 
 //更新
@@ -44,6 +46,7 @@ void CFieldManager::Draw()
 	field_.Draw();
 	road_.Draw();
 	pole_.Draw();
+	navi_.Draw();
 }
 
 

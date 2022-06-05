@@ -20,7 +20,7 @@ namespace
 {
 	//プレイヤー関連
 	const VECTOR PLAYER_START_POS = VGet(5.0f, 1.0f, 250.0f);	//プレイヤーの座標
-	const VECTOR PLAYER_CONTINUE_POS = VGet(-1500.0f, 1.0f, 1700.0f);	//プレイヤーの座標
+	const VECTOR PLAYER_CONTINUE_POS = VGet(-1300.0f, 1.0f, 1700.0f);	//プレイヤーの座標
 	const VECTOR PLAYER_CONTINUE_ROT = VGet(0.0f, 4.8f, 0.0f);	//プレイヤーの回転
 
 
@@ -613,8 +613,7 @@ void CPlayer::FromAttack()
 		if (CMyMath::RadiusCheck(pos_.x, ATTACK_RAD, bossPos.x) &&
 			CMyMath::RadiusCheck(pos_.z, ATTACK_RAD, bossPos.z))
 		{
-			boss->SetColFlg(true);
-			boss->Damage(DMG_WEAK);
+			boss->Damage(GLOVE_DMG);
 		}
 	}
 	//アニメーション終了したなら待機に戻る
